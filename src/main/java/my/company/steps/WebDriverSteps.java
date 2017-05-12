@@ -91,7 +91,7 @@ public class WebDriverSteps {
     }
 
     @Step
-    public void forceClick(WebElement element, String condition) {
+    public void forceClickIn(String hint, WebElement element, String condition) {
         if (driver.toString().contains("InternetExplorerDriver")) {
             element.sendKeys(Keys.ENTER);
         } else {

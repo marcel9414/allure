@@ -50,7 +50,7 @@ public class AvivaSearchTest {
         WebElement aviva= checkFirstResult("Grupo Aviva - compañía de seguros líder en Europa, el mayor grupo ...");
         
         Assert.assertEquals(HOME_URL, aviva.getAttribute("href"));
-        steps.forceClick(aviva,"headerNav");
+        steps.forceClickIn("Pulsar primer elemento de la busqueda google ",aviva,"headerNav");
         steps.makeScreenShot();
         steps.quit();
     }
