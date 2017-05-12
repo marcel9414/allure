@@ -90,7 +90,7 @@ public class WebDriverSteps {
         return element;
     }
 
-    @Step("Click")
+    @Step
     public void forceClick(WebElement element, String condition) {
         if (driver.toString().contains("InternetExplorerDriver")) {
             element.sendKeys(Keys.ENTER);
@@ -102,6 +102,8 @@ public class WebDriverSteps {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(condition)));
         Assert.assertEquals(HOME_TITLE, driver.getTitle());
         }
+        
+        
     }
 
     public void quit() {
